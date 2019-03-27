@@ -32,6 +32,12 @@ article {
 	}
 } /*End of Grid supported code*/
 
+@media only screen and (max-width:350px) {
+	article > p h1 button {
+		font-size: .75rem;
+		padding: 0px;
+	}
+}
 
 .deals {
 	font-family: Avenir, Roboto, Helvetica, san-serif;
