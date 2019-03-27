@@ -93,6 +93,7 @@ article {
 	.description {
 		font-size: .90rem;
 		padding: 0px;
+		width: 150px
 	}
 	article > h1 {
 		font-size: 20px;
@@ -102,7 +103,7 @@ article {
 		width: 150px;
 	}
 	.deals {
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
 
 } /* End of Media query to change article font size*/
