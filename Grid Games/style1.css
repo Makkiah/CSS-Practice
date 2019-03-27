@@ -1,0 +1,85 @@
+
+* {
+	box-sizing: border-box;
+}
+body {
+	background: #F0F0F0;
+	padding:1rem;
+}
+/*Fallback layout*/
+main {
+	max-width:500px;
+	margin:0 auto;
+}
+
+article {
+	margin: 1rem 0;
+}
+
+/*Layout for browsers that support CSS Grid*/
+@supports (display: grid) {
+	main{
+		max-width:10000px;
+		margin: 0;
+	}
+	article {
+		margin: 0;
+	}
+	.deals {
+		display:grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-gap: 1rem;
+	}
+} /*End of Grid supported code*/
+
+
+.deals {
+	font-family: Avenir, Roboto, Helvetica, san-serif;
+	font-size: 1rem;
+}
+
+/*Base layout Code/Code for all browsers that don't support Grid*/
+.sale-item {
+	display: flex;
+	flex-flow: column;
+	border: 1px solid black;
+	border-radius: 1rem;
+	padding: 2rem;
+}
+
+/*Structuring the elements nested in article*/
+.sale-item > h1 {
+	margin: 1rem 1rem 0;
+}
+.sale-item > p {
+	margin: 0.25rem 1rem 1rem;
+}
+.sale-item > img {
+	order: -1;
+	align-self: center;
+	height: 300px;
+	width: 200px;
+	transition: all 0.5s;
+}
+.sale-item > button {
+	margin-top: auto;
+	background: #A5DEF1;
+	color: white;
+	padding: 0.5rem;
+	border: none;
+	border-radius: 1rem;
+	font-size: 1.2rem;
+	transition: all 0.5s;
+}
+
+/*Custom Additions*/
+.sale-item > button:hover {
+	
+	background:#70AFCE;
+}
+
+.sale-item:hover img {
+	transform: scale(1.05);
+	-webkit-box-shadow: rgba(0,0,0,0.8) 0px 5px 15px;
+	box-shadow: rgba(0,0,0,0.6) 0px 5px 15px;
+}
