@@ -32,11 +32,10 @@ article {
 	}
 } /*End of Grid supported code*/
 
-@media only screen and (max-width:350px) {
-	article > p h1 button {
-		font-size: .75rem;
-		padding: 0px;
-	}
+.description {
+	height: 200px;
+	width: 250px;
+	overflow: auto;
 }
 
 .deals {
@@ -89,3 +88,21 @@ article {
 	-webkit-box-shadow: rgba(0,0,0,0.8) 0px 5px 15px;
 	box-shadow: rgba(0,0,0,0.6) 0px 5px 15px;
 }
+
+@media only screen and (max-width: 600px) {
+	.description {
+		font-size: .90rem;
+		padding: 0px;
+	}
+	article > h1 {
+		font-size: 20px;
+	}
+	.sale-item > img {
+		height: 250px;
+		width: 150px;
+	}
+	.deals {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+
+} /* End of Media query to change article font size*/
